@@ -1,2 +1,2 @@
 # PruebaTecnica
-Proyecto creado para la prueba técnica de encora
+Proyecto creado para la prueba técnica de SYRI
