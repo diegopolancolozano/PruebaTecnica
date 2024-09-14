@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-public class Genre {
+public class Gender {
 
     @Id
     @Column(nullable = false, length = 50)
@@ -15,11 +15,11 @@ public class Genre {
     private Set<Movie> movies = new HashSet<>();
 
     // Constructor vacío necesario para JPA
-    public Genre() {
+    public Gender() {
     }
 
     // Constructor con parámetros
-    public Genre(String name) {
+    public Gender(String name) {
         this.name = name;
     }
 

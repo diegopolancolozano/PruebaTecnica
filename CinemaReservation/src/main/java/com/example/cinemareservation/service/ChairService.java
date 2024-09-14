@@ -16,4 +16,14 @@ public class ChairService {
     public Optional<Chair> getChairById(Long id) {
         return chairRepository.findById(id);
     }
+
+    public Chair saveChair(Chair chair) {
+        return chairRepository.save(chair);
+    }
+
+
+    public void deleteChair(Long id) {
+        chairRepository.deleteById(id);
+    }
+
 }

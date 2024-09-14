@@ -29,7 +29,7 @@ public class Movie {
             joinColumns = @JoinColumn(name = "movie_id"),
             inverseJoinColumns = @JoinColumn(name = "genre_name")
     )
-    private Set<Genre> genres = new HashSet<>();
+    private Set<Gender> genders = new HashSet<>();
 
     // Constructor vacío necesario para JPA
     public Movie() {
@@ -85,12 +85,12 @@ public class Movie {
         this.releaseDate = releaseDate;
     }
 
-    public Set<Genre> getGenres() {
-        return genres;
+    public Set<Gender> getGender() {
+        return genders;
     }
 
-    public void setGenres(Set<Genre> genres) {
-        this.genres = genres;
+    public void setGenders(Set<Gender> genres) {
+        this.genders = genres;
     }
 
     @Override
@@ -101,7 +101,7 @@ public class Movie {
                 ", director='" + director + '\'' +
                 ", duration=" + duration +
                 ", releaseDate=" + releaseDate +
-                ", genres=" + genres +
+                ", genders=" + genders +
                 '}';
     }
 }

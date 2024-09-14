@@ -35,7 +35,12 @@ public class ShowService {
         return showRepository.findAllByShowTimeAfter(showTime);
     }
 
+    public Optional<Show> getShowByDate(LocalDateTime dateTime) {
+        return showRepository.findByShowTime(dateTime);
+    }
+
     public void deleteShow(Long id) {
         showRepository.deleteById(id);
     }
+
 }
