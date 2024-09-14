@@ -9,6 +9,10 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDateTime;
 import java.util.Optional;
 
+/**
+ * The ShowController class in Java defines REST endpoints for creating, retrieving, and deleting
+ * shows.
+ */
 @RestController
 @RequestMapping("/shows")
 public class ShowController {

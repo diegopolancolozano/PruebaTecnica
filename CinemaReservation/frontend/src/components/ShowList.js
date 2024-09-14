@@ -10,9 +10,9 @@ const ShowList = () => {
     useEffect(() => {
         const fetchShows = async () => {
             try {
-                const response = await axios.get('/api/shows');
+                const response = await axios.get('/api/shows'); // Asegúrate de que este endpoint es correcto
                 setShows(response.data);
-            } catch (e) {
+            } catch {
                 setError('Failed to fetch shows');
             }
         };
@@ -31,6 +31,6 @@ const ShowList = () => {
             </ul>
         </div>
     );
-}
+};
 
 export default ShowList;

@@ -1,8 +1,12 @@
 package com.example.cinemareservation.model;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.Set;
 
+/**
+ * The `Reservation` class represents a reservation made by a client for a show, specifying the
+ * client's name, the show, and the reserved chairs.
+ */
 @Entity
 public class Reservation {
 

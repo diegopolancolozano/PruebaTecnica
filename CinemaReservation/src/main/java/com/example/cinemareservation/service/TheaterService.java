@@ -8,6 +8,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * This class  provides services related to managing a theater, such as ticket sales, seat
+ * reservations, or show scheduling.
+ */
 @Service
 public class TheaterService {
 

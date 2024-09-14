@@ -1,6 +1,6 @@
 package com.example.cinemareservation.model;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -11,7 +11,7 @@ public class Gender {
     @Column(nullable = false, length = 50)
     private String name;
 
-    @ManyToMany(mappedBy = "genres")
+    @ManyToMany(mappedBy = "genders")
     private Set<Movie> movies = new HashSet<>();
 
     // Constructor vacío necesario para JPA
@@ -42,7 +42,7 @@ public class Gender {
 
     @Override
     public String toString() {
-        return "Genre{" +
+        return "Gender{" +
                 "name='" + name + '\'' +
                 '}';
     }

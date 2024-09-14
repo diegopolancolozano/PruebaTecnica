@@ -1,10 +1,13 @@
 package com.example.cinemareservation.model;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
+/**
+ * The `Theater` class is a JPA entity representing a theater with properties such as id, name, and
+ * capacity, along with constructors and getters/setters.
+ */
 @Entity
 public class Theater {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -23,11 +26,10 @@ public class Theater {
     public Theater(String name, int capacity) {
         this.name = name;
         this.capacity = capacity;
-        if(capacity<=0) this.capacity = 1;
+        if(capacity <= 0) this.capacity = 1;
     }
 
     // Getters y Setters
-
     public Long getId() {
         return id;
     }

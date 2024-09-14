@@ -1,6 +1,6 @@
 package com.example.cinemareservation.model;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 public class Chair {
@@ -12,7 +12,6 @@ public class Chair {
     @Column(nullable = false, unique = true)
     private int chairNumber; // Número de la silla
 
-    // Relación con Theater o Sala de cine
     @ManyToOne
     @JoinColumn(name = "theater_id", nullable = false)
     private Theater theater;
@@ -28,7 +27,6 @@ public class Chair {
     }
 
     // Getters y Setters
-
     public Long getId() {
         return id;
     }
@@ -58,7 +56,7 @@ public class Chair {
         return "Chair{" +
                 "id=" + id +
                 ", chairNumber=" + chairNumber +
-                ", theater=" + theater.getName() +
+                ", theater=" + (theater != null ? theater.getName() : "null") +
                 '}';
     }
 }

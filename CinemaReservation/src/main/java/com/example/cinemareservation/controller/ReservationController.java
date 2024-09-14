@@ -9,6 +9,10 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 import java.util.Set;
 
+/**
+ * The `ReservationController` class in Java defines REST endpoints for creating, retrieving, and
+ * canceling reservations.
+ */
 @RestController
 @RequestMapping("/reservations")
 public class ReservationController {

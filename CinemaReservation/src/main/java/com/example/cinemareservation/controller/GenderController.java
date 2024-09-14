@@ -38,7 +38,7 @@ public class GenderController {
     // Obtener un género por su ID
     @GetMapping("/{id}")
     public ResponseEntity<Gender> getGenderById(@PathVariable String id) {
-        Optional<Gender> gender = genderService.getGenderById(Long.valueOf(id));
+        Optional<Gender> gender = genderService.getGenderById(id);
         return gender.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
@@ -46,7 +46,7 @@ public class GenderController {
     // Eliminar un género por su ID
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteGender(@PathVariable String id) {
-        Optional<Gender> gender = genderService.getGenderById(Long.valueOf(id));
+        Optional<Gender> gender = genderService.getGenderById(id);
         if (gender.isPresent()) {
             genderService.deleteGender(Long.valueOf(id));
             return ResponseEntity.noContent().build();

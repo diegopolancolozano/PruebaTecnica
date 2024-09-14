@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from 'react';
+// src/components/MovieList.js
+
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const Movies = () => {
+const MovieList = () => {
     const [movies, setMovies] = useState([]);
     const [error, setError] = useState('');
 
     useEffect(() => {
-        axios.get('/movies')
+        axios.get('/api/movies') // Asegúrate de que este endpoint es correcto
             .then(response => {
                 setMovies(response.data);
                 setError('');
             })
-            .catch(error => {
-                setError('Failed to fetch movies');
-            });
+            .catch(() => setError('Failed to fetch movies'));
     }, []);
 
     return (
@@ -30,4 +30,4 @@ const Movies = () => {
     );
 };
 
-export default Movies;
+export default MovieList;

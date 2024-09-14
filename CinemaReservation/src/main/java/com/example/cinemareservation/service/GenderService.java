@@ -44,7 +44,7 @@ public class GenderService {
         return genderRepository.findAll();
     }
 
-    public Optional<Gender> getGenderById(Long id) {
+    public Optional<Gender> getGenderById(String id) {
         return genderRepository.findById(id);
     }
 

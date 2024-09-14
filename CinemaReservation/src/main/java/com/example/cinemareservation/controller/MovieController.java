@@ -9,6 +9,10 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
+/**
+ * The GenderController class in Java defines RESTful endpoints for managing gender data including
+ * getting all genders, creating a new gender, getting a gender by ID, and deleting a gender by ID.
+ */
 
 @RestController
 @RequestMapping("/movies")

@@ -1,8 +1,12 @@
 package com.example.cinemareservation.model;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
+/**
+ * The `Show` class represents a show with details such as show time, associated movie, and theater in
+ * a Java application using JPA annotations.
+ */
 @Entity
 public class Show {
 

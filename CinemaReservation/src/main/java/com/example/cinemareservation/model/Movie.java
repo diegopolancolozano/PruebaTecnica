@@ -1,10 +1,14 @@
 package com.example.cinemareservation.model;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * The `Movie` class represents a movie entity with attributes such as title, director, duration,
+ * release date, and genres.
+ */
 @Entity
 public class Movie {
 
@@ -27,7 +31,7 @@ public class Movie {
     @JoinTable(
             name = "movie_genre", // Nombre de la tabla intermedia
             joinColumns = @JoinColumn(name = "movie_id"),
-            inverseJoinColumns = @JoinColumn(name = "genre_name")
+            inverseJoinColumns = @JoinColumn(name = "gender_name")
     )
     private Set<Gender> genders = new HashSet<>();
 
@@ -89,8 +93,8 @@ public class Movie {
         return genders;
     }
 
-    public void setGenders(Set<Gender> genres) {
-        this.genders = genres;
+    public void setGenders(Set<Gender> genders) {
+        this.genders = genders;
     }
 
     @Override
